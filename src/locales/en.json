@@ -14,5 +14,8 @@
   "karana": "Karana",
   "yoga": "Yoga",
   "start": "Start",
-  "end": "End"
+  "end": "End",
+  "selectCityAlert": "Please select a city from the suggestions.",
+  "fetchError": "An error occurred while fetching data.",
+  "reset": "Reset"
 }
