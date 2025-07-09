@@ -31,9 +31,12 @@ function MuhuratPage() {
     }
 
     try {
-      const res = await axios.get("https://shubh-muhurat-server.onrender.com/api/geocode", {
-        params: { city: input },
-      });
+      const res = await axios.get(
+        "https://shubh-muhurat-server.onrender.com/api/geocode",
+        {
+          params: { city: input },
+        }
+      );
       setSuggestions(res.data.suggestions);
     } catch (err) {
       console.error(err);
@@ -58,13 +61,16 @@ function MuhuratPage() {
     try {
       setLoading(true);
 
-      const muhuratRes = await axios.get("https://shubh-muhurat-server.onrender.com/api", {
-        params: {
-          date,
-          lat: selectedCity.lat,
-          lon: selectedCity.lon,
-        },
-      });
+      const muhuratRes = await axios.get(
+        "https://shubh-muhurat-server.onrender.com/api/muhurat",
+        {
+          params: {
+            date,
+            lat: selectedCity.lat,
+            lon: selectedCity.lon,
+          },
+        }
+      );
 
       setResult({
         ...muhuratRes.data.data,
@@ -100,18 +106,11 @@ function MuhuratPage() {
     <div className="App">
       <h1>{t("title")}</h1>
 
-      {/* Language toggle buttons */}
       <div style={{ marginBottom: "1rem" }}>
-        <button
-          onClick={() => handleChangeLanguage("en")}
-          className="lang-btn"
-        >
+        <button onClick={() => handleChangeLanguage("en")} className="lang-btn">
           English
         </button>
-        <button
-          onClick={() => handleChangeLanguage("gu")}
-          className="lang-btn"
-        >
+        <button onClick={() => handleChangeLanguage("gu")} className="lang-btn">
           ગુજરાતી
         </button>
       </div>
@@ -206,11 +205,7 @@ function MuhuratPage() {
             </p>
           ))}
 
-          {/* Reset Button */}
-          <button
-            onClick={handleReset}
-            className="reset-btn"
-          >
+          <button onClick={handleReset} className="reset-btn">
             {t("reset")}
           </button>
         </div>
