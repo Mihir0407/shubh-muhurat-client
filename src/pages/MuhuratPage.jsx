@@ -31,7 +31,7 @@ function MuhuratPage() {
     }
 
     try {
-      const res = await axios.get("http://localhost:5000/api/geocode", {
+      const res = await axios.get("https://shubh-muhurat-server.onrender.com/api/geocode", {
         params: { city: input },
       });
       setSuggestions(res.data.suggestions);
@@ -58,7 +58,7 @@ function MuhuratPage() {
     try {
       setLoading(true);
 
-      const muhuratRes = await axios.get("http://localhost:5000/api/muhurat", {
+      const muhuratRes = await axios.get("https://shubh-muhurat-server.onrender.com/api", {
         params: {
           date,
           lat: selectedCity.lat,
