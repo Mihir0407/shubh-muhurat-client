@@ -13,6 +13,7 @@ h1 {
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 input,
@@ -44,6 +45,7 @@ button:hover {
   margin-top: 0;
   color: #1d3557;
 }
+
 .suggestions-list {
   list-style: none;
   margin: 0;
@@ -66,12 +68,19 @@ button:hover {
   background-color: #eee;
 }
 
+.lang-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .lang-btn {
   background-color: #457b9d;
   color: #fff;
   border: none;
   padding: 8px 12px;
-  margin-right: 10px;
+  margin: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -80,7 +89,8 @@ button:hover {
   background-color: #1d3557;
 }
 
-.submit-btn {
+.submit-btn,
+.reset-btn {
   background-color: #457b9d;
   color: #fff;
   border: none;
@@ -89,19 +99,49 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-  background-color: #1d3557;
-}
-
-.reset-btn {
-  background-color: #457b9d;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
+.submit-btn:hover,
 .reset-btn:hover {
   background-color: #1d3557;
+}
+
+@media (max-width: 600px) {
+  .App {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .lang-btn {
+    width: 48%;
+    margin: 8px 1%;
+  }
+
+  .submit-btn,
+  .reset-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .result-section {
+    padding: 10px;
+  }
+
+  .result-section h2 {
+    font-size: 18px;
+  }
+
+  .result-section p,
+  .result-section h3 {
+    font-size: 14px;
+  }
 }

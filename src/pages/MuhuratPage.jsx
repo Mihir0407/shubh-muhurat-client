@@ -106,7 +106,7 @@ function MuhuratPage() {
     <div className="App">
       <h1>{t("title")}</h1>
 
-      <div style={{ marginBottom: "1rem" }}>
+      <div className="lang-buttons">
         <button onClick={() => handleChangeLanguage("en")} className="lang-btn">
           English
         </button>
