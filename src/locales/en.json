@@ -1,0 +1,18 @@
+{
+  "title": "Shubh Muhurat Finder",
+  "date": "Select Date",
+  "city": "Enter City Name",
+  "get_muhurat": "Get Muhurat",
+  "results_for": "Results for",
+  "vaara": "Vaara",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "moonrise": "Moonrise",
+  "moonset": "Moonset",
+  "tithi": "Tithi",
+  "nakshatra": "Nakshatra",
+  "karana": "Karana",
+  "yoga": "Yoga",
+  "start": "Start",
+  "end": "End"
+}
