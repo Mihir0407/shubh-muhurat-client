@@ -119,6 +119,7 @@ function MuhuratPage() {
         <input
           type="date"
           value={date}
+          placeholder="Enter date"
           onChange={(e) => setDate(e.target.value)}
           required
         />
