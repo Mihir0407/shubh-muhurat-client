@@ -116,13 +116,15 @@ function MuhuratPage() {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <input
-          type="date"
-          value={date}
-          placeholder="Enter date"
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
+        <label className="input-label">
+          {t("date")}
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+        </label>
 
         <div style={{ position: "relative", marginTop: "10px" }}>
           <input

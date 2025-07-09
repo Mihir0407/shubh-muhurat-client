@@ -145,3 +145,16 @@ button:hover {
     font-size: 14px;
   }
 }
+.input-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.input-label input {
+  margin-top: 5px;
+  padding: 10px;
+}
